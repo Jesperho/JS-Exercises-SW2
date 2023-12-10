@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let numbers = [];
+        let num;
+        let i = true;
+        do {
+            num = Number(prompt("Input numbers: "))
+            for (let j = 0; j < numbers.length; j++) {
+                if (num == numbers[j]) {
+                    i = false;
+                    alert(num + "has already been input.");
+                    break;
+                }
+            }
+            if (i == true) {numbers.push(num);}
+        } while (i==true);
+        numbers.sort(function(a, b) {return a - b});
+        for (let k = 0; k < numbers.length; k++) {
+            console.log(numbers[k]);
+        }
+
+
+    </script>
+</body>
+</html>

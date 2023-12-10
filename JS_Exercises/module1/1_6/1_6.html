@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        if (confirm('Should i calculate the square root?')){
+            var number = (prompt("Enter a number: "));
+
+            if (number >= 0){
+                var squareRoot = Math.sqrt(number);
+                document.write("The square root of " + number + " is " + squareRoot);
+            }else {
+                document.write("The square root is not defined.");
+            }
+        } else{
+            document.write("The square root is not calculated")
+        }
+        
+
+    </script>
+
+</body>
+</html>

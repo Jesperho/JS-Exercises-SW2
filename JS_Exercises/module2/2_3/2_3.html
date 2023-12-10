@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    let dogNames = [];
+    for (let i = 0; i < 6; i++) {
+      let dogName = prompt("Enter the name of dog " + (i + 1));
+      dogNames.push(dogName);
+    }
+    
+    dogNames.sort();
+    dogNames.reverse();
+    
+    let ulElement = document.createElement('ul');
+    for (let i = 0; i < dogNames.length; i++) {
+      let liElement = document.createElement('li');
+      liElement.textContent = dogNames[i];
+      ulElement.appendChild(liElement);
+    }
+    document.body.appendChild(ulElement);
+    
+        
+</script>
+</body>
+</html>

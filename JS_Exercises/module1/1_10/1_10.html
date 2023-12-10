@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function dice() {
+            const numDice = parseInt(prompt("number of dices: "));
+            const eyesDice = parseInt(prompt("Eye number of dices: "));
+
+            if (numDice <= 0 || eyesDice < 0) {
+                alert("Please enter valid values.");
+                return;
+            }
+
+            let successfulOutcomes = 0;
+            for (let i = 0; i < 10000; i++) {
+                let total = 0;
+
+                for (let j = 0; j < numDice; j++) {
+                    total += Math.floor(Math.random() * 6) + 1;
+                }
+
+                if (total == eyesDice) {
+                    successfulOutcomes++;
+                }
+            }
+
+            const probability = (successfulOutcomes / 10000) * 100;
+            document.write(`Probability of getting a sum of ${eyesDice} with ${numDice} dice: ${probability.toFixed(2)}%`);
+        }
+
+        
+        dice();
+    </script>
+
+</body>
+
+</html>

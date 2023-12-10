@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="target">
+
+    </ol>
+    
+    <script>
+        const element = document.querySelector('#target')
+
+        const list = []
+
+        let participants = parseInt(prompt("Enter the number of participants: "))
+
+        for (let i = 1; i <= participants; i++){
+        const name = prompt(`Enter name of participant: ${i}`)
+        list.push(name)
+        }
+
+        let namesString = '';
+        for (let i = 0; i < participants; i++) {
+        namesString += `<li>${list[i]}</li>`;
+}
+        element.innerHTML = namesString;
+    </script>
+    
+</body>
+</html>
